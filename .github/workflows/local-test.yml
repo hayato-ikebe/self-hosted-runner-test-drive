@@ -24,5 +24,7 @@ jobs:
       - name: Output event data
         run: echo "${{ toJson(github.event) }}"
       - name: Greeting
-        run: echo "Hello World from Self-Hosted Runner!"
+        run: |
+          hostname
+          echo "Hello World from Self-Hosted Runner!"
               

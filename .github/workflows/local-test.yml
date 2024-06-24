@@ -15,7 +15,7 @@ jobs:
       - name: Output event data
         run: echo "${{ toJson(github.event) }}"
       - name: Java version
-        run: java -v
+        run: java --version
       - name: Gradle version
         run: gradle -v
       - name: Get code

@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - dev
+      - 'feature/**'
   pull_request:
   workflow_dispatch:
 
@@ -13,6 +13,10 @@ jobs:
     steps:
       - name: Output event data
         run: echo "${{ toJson(github.event) }}"
+      - name: Java version
+        run: java --version
+      - name: Gradle version
+        run: gradle -v
       - name: Get code
         uses: actions/checkout@v4
       - name: Greeting

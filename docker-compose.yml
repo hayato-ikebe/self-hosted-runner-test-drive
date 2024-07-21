@@ -1,7 +1,10 @@
 services:
   test-drive:
-    restart: unless-stopped
+#    restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile.dev
-    platform: linux/arm64
+    image: test-drive  # tag can be added.
+#    platform: linux/arm64
+    volumes:
+      - .:/home/gradle/self-hosted-runner-test-drive

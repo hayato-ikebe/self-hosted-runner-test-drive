@@ -1,5 +1,7 @@
 services:
   test-drive:
     restart: unless-stopped
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     platform: linux/arm64

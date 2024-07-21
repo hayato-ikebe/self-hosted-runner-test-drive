@@ -4,7 +4,9 @@ on:
 #    branches:
 #      - main
 #      - 'feature/**'
-#  pull_request:
+#  pull_request:  # Default filter: opened, synchronize, reopened
+#    types:
+#      - opened
   workflow_dispatch:
 
 jobs:
@@ -17,27 +19,27 @@ jobs:
         run: java --version
       - name: Gradle version
         run: gradle -v
-      - name: Get code
+      - name: Checkout code
         uses: actions/checkout@v4
       - name: Greeting
         run: echo "Hello World from Github!"
 
-  self-hosted:
-    runs-on: self-hosted
+#   self-hosted:
+#     runs-on: self-hosted
 #    defaults:
 #      run:
 #        working-directory: /tmp
-    steps:
-      - name: Output event data
-        run: echo "${{ toJson(github.event) }}"
-      - name: Greeting
-        run: |
-          hostname
-          echo "Hello World from Self-Hosted Runner!"
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Build
-        run: ./gradlew build
-      - name: Test
-        run: ./gradlew test
+#     steps:
+#       - name: Output event data
+#         run: echo "${{ toJson(github.event) }}"
+#       - name: Greeting
+#         run: |
+#           hostname
+#           echo "Hello World from Self-Hosted Runner!"
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#       - name: Build
+#         run: ./gradlew build
+#       - name: Test
+#         run: ./gradlew test
               

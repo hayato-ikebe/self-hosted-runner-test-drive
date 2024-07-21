@@ -1,0 +1,5 @@
+services:
+  test-drive:
+    restart: unless-stopped
+    build: .
+    platform: linux/arm64

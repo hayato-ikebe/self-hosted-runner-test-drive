@@ -25,6 +25,7 @@ jobs:
         run: echo "Hello World from Github!"
 
   system-integration-test:
+    needs: actions-on-cloud
     runs-on: self-hosted
     defaults:
       run:

@@ -1,12 +1,12 @@
 name: Self Hosted Runner Test Drive
 on:
-#  push:
-#    branches:
-#      - main
-#      - 'feature/**'
-#  pull_request:  # Default filter: opened, synchronize, reopened
-#    types:
-#      - opened
+  push:
+    branches:
+      - main
+      - 'feature/**'
+  pull_request:  # Default filter: opened, synchronize, reopened
+    types:
+      - opened
   workflow_dispatch:
 
 jobs:

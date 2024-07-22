@@ -22,7 +22,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Greeting
-        run: echo "Hello World from Github!"
+        run: echo "Hello World from Github and me!"
 
   system-integration-test:
     needs: actions-on-cloud

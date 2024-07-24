@@ -1,7 +1,8 @@
 FROM gradle:8.9.0-jdk21-alpine
 
 WORKDIR /home/gradle/self-hosted-runner-test-drive
-# COPY . .  # This will be required for the production.
+
+COPY . .
 
 RUN gradle build --no-daemon
 

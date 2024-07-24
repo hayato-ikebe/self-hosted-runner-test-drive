@@ -1,10 +1,19 @@
 services:
   test-drive:
-#    restart: unless-stopped
+    # restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile.dev
-    image: test-drive  # tag can be added.
-#    platform: linux/arm64
+    image: hayato-ikebe/test-drive  # tag can be added.
+    # platform: linux/arm64
+    # ports:
+    #   - "3000:3000"
     volumes:
       - .:/home/gradle/self-hosted-runner-test-drive
+  # tests:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.dev
+  #   volumes:
+  #     - .:/home/gradle/self-hosted-runner-test-drive
+  #   command: ["gradle", "test"]

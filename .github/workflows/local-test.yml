@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  github-hosted:
+  build-artifact:
     runs-on: ubuntu-latest
     steps:
       - name: Output event data
